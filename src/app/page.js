@@ -10,8 +10,7 @@ export default function Home() {
     fetch('http://localhost:8080/meetings')
       .then(res => res.json())
       .then(data => {
-          console.log("masuk")
-          setMeetings(data)
+          setMeetings(data.meetings)
       }
     );
   }, []);
